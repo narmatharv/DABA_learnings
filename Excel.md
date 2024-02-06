@@ -25,7 +25,7 @@ Hit enter
 Enter a value in the cell selected for the Lookup_value H3(7)
 ```
 
-##HLOOKUP
+## HLOOKUP
 ```
 HLOOKUP in Excel stands for ‘Horizontal Lookup’. It is a function that makes Excel search for a certain value in a row (the so called ‘table array’), in order to return a value from a different row in the same column.
 
@@ -40,3 +40,20 @@ Syntax: HLOOKUP([value], [range], [row number], [false or true])
 NOTE:  video link:  https://youtu.be/8okA22yMwTs?si=thg-QaSbwH-Z_Phz
 ```
 
+## XLOOKUP
+```
+The Excel XLOOKUP function is a modern and flexible replacement for older functions like VLOOKUP, HLOOKUP, and LOOKUP.  XLOOKUP supports approximate and exact matching, wildcards (* ?) for partial matches, and lookups in vertical or horizontal ranges.
+
+Syntax
+=XLOOKUP(lookup,lookup_array,return_array,[not_found],[match_mode],[search_mode])
+lookup - The lookup value.
+lookup_array - The array or range to search.
+return_array - The array or range to return.
+not_found - [optional] Value to return if no match found.
+match_mode - [optional] 0 = exact match (default), -1 = exact match or next smallest, 1 = exact match or next larger, 2 = wildcard match.
+search_mode - [optional] 1 = search from first (default), -1 = search from last, 2 = binary search ascending, -2 = binary search descending.
+
+NOTE: video link: https://exceljet.net/functions/xlookup-function
+
+https://youtu.be/Gfu26nNvrsk?si=vDUpO53FXYkwneBO
+```
