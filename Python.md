@@ -377,4 +377,12 @@ i) Also, use the global keyword if you want to change a global variable inside a
 
 ```
 
- 
+ ## Python Keywords
+ ```
+      Refer this: https://www.w3schools.com/python/python_ref_keywords.asp
+ ```
+
+## Data Types
+```
+
+
