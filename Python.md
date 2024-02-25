@@ -529,3 +529,420 @@ i) Also, use the global keyword if you want to change a global variable inside a
       print(type(x))
       print(type(y))
       print(type(z))
+
+4. Type Conversion
+      You can convert from one type to another with the int(), float(), and complex() methods:
+      Example
+      Convert from one type to another:
+      
+      x = 1    # int
+      y = 2.8  # float
+      z = 1j   # complex
+      
+      #convert from int to float:
+      a = float(x)
+      
+      #convert from float to int:
+      b = int(y)
+      
+      #convert from int to complex:
+      c = complex(x)
+      
+      print(a)
+      print(b)
+      print(c)
+      
+      print(type(a))
+      print(type(b))
+      print(type(c))
+      
+      output:
+      1.0
+      2
+      (1+0j)
+      <class 'float'>
+      <class 'int'>
+      <class 'complex'>
+
+5. Random Number
+      Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:
+      
+      Example
+      Import the random module, and display a random number between 1 and 9:
+      
+      import random
+      
+      print(random.randrange(1, 10))
+
+      o/p: 5
+```
+
+## Python Casting
+```
+1. Specify a Variable Type
+      There may be times when you want to specify a type on to a variable. This can be done with casting. Python is an object-orientated language, and as such it uses classes to define          data types, including its primitive types.
+      
+      Casting in python is therefore done using constructor functions:
+      
+      int() - constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)
+      float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
+      str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals
+
+      Example 1:
+      Integers:
+      
+            x = int(1)   # x will be 1
+            y = int(2.8) # y will be 2
+            z = int("3") # z will be 3
+            print(x)
+            print(y)
+            print(z)
+            o/p:
+            1
+            2
+            3
+
+      Example 2:
+      Floats:
+      
+            x = float(1)     # x will be 1.0
+            y = float(2.8)   # y will be 2.8
+            z = float("3")   # z will be 3.0
+            w = float("4.2") # w will be 4.2
+
+      Example 3:
+      Strings:
+      
+            x = str("s1") # x will be 's1'
+            y = str(2)    # y will be '2'
+            z = str(3.0)  # z will be '3.0'
+```
+
+## Python Strings
+```
+1. Strings
+      Strings in python are surrounded by either single quotation marks, or double quotation marks.
+      
+      'hello' is the same as "hello".
+      
+      You can display a string literal with the print() function:
+      
+      Example
+      print("Hello")
+      print('Hello')
+
+2. Assign String to a Variable
+      Assigning a string to a variable is done with the variable name followed by an equal sign and the string:
+      
+      Example
+      a = "Hello"
+      print(a)
+
+3.Multiline Strings
+      You can assign a multiline string to a variable by using three quotes:
+      
+      Example
+      You can use three double quotes:
+      
+      a = """Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua."""
+      print(a)
+
+4. Strings are Arrays
+      Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.
+      
+      However, Python does not have a character data type, a single character is simply a string with a length of 1.
+      
+      Square brackets can be used to access elements of the string.
+      
+      Example
+      Get the character at position 1 (remember that the first character has the position 0):
+      
+      a = "Hello, World!"
+      print(a[1])
+
+      o/p: e
+
+5. Looping Through a String
+      Since strings are arrays, we can loop through the characters in a string, with a for loop.
+      
+      Example
+      Loop through the letters in the word "banana":
+      
+      for x in "banana":
+        print(x)
+      o/p:
+      b
+      a
+      n
+      a
+      n
+      a
+
+6. String Length
+      To get the length of a string, use the len() function.
+      
+      Example
+      The len() function returns the length of a string:
+      
+      a = "Hello, World!"
+      print(len(a))
+
+      o/p: 13
+
+7. Check String
+      To check if a certain phrase or character is present in a string, we can use the keyword in.
+      
+      Example
+      Check if "free" is present in the following text:
+      
+      txt = "The best things in life are free!"
+      print("free" in txt)
+      o/p: True
+
+      Use it in an if statement:
+      
+      Example
+      Print only if "free" is present:
+      
+      txt = "The best things in life are free!"
+      if "free" in txt:
+        print("Yes, 'free' is present.")
+
+8. Check if NOT
+      To check if a certain phrase or character is NOT present in a string, we can use the keyword not in.
+      
+      Example
+      Check if "expensive" is NOT present in the following text:
+      
+      txt = "The best things in life are free!"
+      print("expensive" not in txt)
+      o/p: True
+
+      Use it in an if statement:
+      
+      Example
+      print only if "expensive" is NOT present:
+      
+      txt = "The best things in life are free!"
+      if "expensive" not in txt:
+        print("No, 'expensive' is NOT present.")
+```
+
+## Python - Slicing Strings
+```
+1. Slicing
+      You can return a range of characters by using the slice syntax.
+      
+      Specify the start index and the end index, separated by a colon, to return a part of the string.
+      
+      ExampleGet your own Python Server
+      Get the characters from position 2 to position 5 (not included):
+      
+      b = "Hello, World!"
+      print(b[2:5])
+      o/p: llo
+
+2.Slice From the Start
+      By leaving out the start index, the range will start at the first character:
+      
+      Example
+      Get the characters from the start to position 5 (not included):
+      
+      b = "Hello, World!"
+      print(b[:5])
+
+      o/p: Hello
+
+3. Slice To the End
+      By leaving out the end index, the range will go to the end:
+      
+      Example
+      Get the characters from position 2, and all the way to the end:
+      
+      b = "Hello, World!"
+      print(b[2:])
+      o/p: llo, World!
+
+4. Negative Indexing
+      Use negative indexes to start the slice from the end of the string:
+
+      Example
+      Get the characters:
+      From: "o" in "World!" (position -5)
+      To, but not included: "d" in "World!" (position -2):
+      
+      b = "Hello, World!"
+      print(b[-5:-2])
+
+      o/p: orl
+```
+
+## Python - Modify Strings
+```
+Python has a set of built-in methods that you can use on strings.
+
+1. Upper Case
+      Example
+      The upper() method returns the string in upper case:
+      
+      a = "Hello, World!"
+      print(a.upper())
+
+      o/p: HELLO, WORLD!
+
+2. Lower Case
+      Example
+      The lower() method returns the string in lower case:
+      
+      a = "Hello, World!"
+      print(a.lower())
+
+3. Remove Whitespace
+      Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
+      
+      Example
+      The strip() method removes any whitespace from the beginning or the end:
+      
+      a = " Hello, World! "
+      print(a.strip()) # returns "Hello, World!"
+
+      o/p: Hello, World!
+
+4. Replace String
+      Example
+      The replace() method replaces a string with another string:
+      
+      a = "Hello, World!"
+      print(a.replace("H", "J"))
+      o/p: Jello World
+
+5. Split String
+      The split() method returns a list where the text between the specified separator becomes the list items.
+      
+      Example
+      The split() method splits the string into substrings if it finds instances of the separator:
+      
+      a = "Hello, World!"
+      print(a.split(",")) # returns ['Hello', ' World!']
+
+      o/p: ['Hello', ' World!']
+
+````
+
+## Python - String Concatenation
+```
+1. String Concatenation
+      To concatenate, or combine, two strings you can use the + operator.
+      
+      Example 1:
+      Merge variable a with variable b into variable c:
+      
+      a = "Hello"
+      b = "World"
+      c = a + b
+      print(c)
+      o/p: HelloWorld
+
+Example 2:
+      To add a space between them, add a " ":
+      
+      a = "Hello"
+      b = "World"
+      c = a + " " + b
+      print(c)
+
+      o/p: Hello World
+
+```
+
+## Python - Format - Strings
+```
+1. String Format
+      As we learned in the Python Variables chapter, we cannot combine strings and numbers like this:
+      
+      Example 1:
+      age = 36
+      txt = "My name is John, I am " + age
+      print(txt)
+      
+      But we can combine strings and numbers by using the format() method!
+      
+      The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:
+      
+      Example 2:
+      Use the format() method to insert numbers into strings:
+      
+      age = 36
+      txt = "My name is John, and I am {}"
+      print(txt.format(age))
+      
+      o/p: My name is John, and I am 36
+
+      The format() method takes unlimited number of arguments, and are placed into the respective placeholders:
+
+      Example 3:
+            quantity = 3
+            itemno = 567
+            price = 49.95
+            myorder = "I want {} pieces of item {} for {} dollars."
+            print(myorder.format(quantity, itemno, price))
+            
+            o/p: I want 3 pieces of item 567 for 49.95 dollars.
+      
+      You can use index numbers {0} to be sure the arguments are placed in the correct placeholders:
+      
+      Example 4:
+            quantity = 3
+            itemno = 567
+            price = 49.95
+            myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+            print(myorder.format(quantity, itemno, price))
+
+            o/p: I want to pay 49.95 dollars for 3 pieces of item 567
+
+```
+
+
+## Python - Escape Characters
+```
+1. Escape Character
+      To insert characters that are illegal in a string, use an escape character.
+      
+      An escape character is a backslash \ followed by the character you want to insert.
+      
+      An example of an illegal character is a double quote inside a string that is surrounded by double quotes:
+      
+      Example 1:
+      You will get an error if you use double quotes inside a string that is surrounded by double quotes:
+      
+      txt = "We are the so-called "Vikings" from the north."
+      
+      
+      To fix this problem, use the escape character \":
+
+      Example 2:
+      The escape character allows you to use double quotes when you normally would not be allowed:
+      
+      txt = "We are the so-called \"Vikings\" from the north."
+      
+      o/p: We are the so-called "Vikings" from the north.
+
+      Escape Characters
+      Other escape characters used in Python:
+      
+      Code	Result	
+      \'	Single Quote	
+      \\	Backslash	
+      \n	New Line	
+      \r	Carriage Return	
+      \t	Tab	
+      \b	Backspace	
+      \f	Form Feed	
+      \ooo	Octal value	
+      \xhh	Hex value
+
+```
+
