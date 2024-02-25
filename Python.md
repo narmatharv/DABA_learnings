@@ -43,3 +43,28 @@ Python uses new lines to complete a command, as opposed to other programming lan
 Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.
 
 ```
+
+# CREATE A NEW PYTHON PROJECT
+```
+1. To check python version on your mac
+      python --version
+
+2. Create a new folder using terminal
+      mkdir Python
+
+3. Go to folder
+      cd Python
+
+4. Create a new file with .py extension
+      touch helloworld.py
+
+5. To start writing code, directly run the command
+      python3
+
+6. Type print("Hello World") and enter
+   output: Hello World
+
+Note: you can also open the IDLE, right click on the file name(helloworld.py) and open with IDLE and enter the above code.
+
+```
+
