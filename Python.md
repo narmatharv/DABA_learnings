@@ -384,5 +384,148 @@ i) Also, use the global keyword if you want to change a global variable inside a
 
 ## Data Types
 ```
+1. Built-in Data Types
 
+      In programming, data type is an important concept.
 
+      Variables can store data of different types, and different types can do different things.
+      
+      Python has the following data types built-in by default, in these categories:
+      
+      Text Type:	str
+      Numeric Types:	int, float, complex
+      Sequence Types:	list, tuple, range
+      Mapping Type:	dict
+      Set Types:	set, frozenset
+      Boolean Type:	bool
+      Binary Types:	bytes, bytearray, memoryview
+      None Type:	NoneType
+
+2. Getting the Data Type
+      You can get the data type of any object by using the type() function:
+      
+      Example
+      Print the data type of the variable x:
+      
+      x = 5
+      print(type(x))
+
+3. Setting the Data Type
+      In Python, the data type is set when you assign a value to a variable:
+
+      Example	                                Data Type	
+      x = "Hello World"	                             str	
+      x = 20	                                   int	
+      x = 20.5	                                    float	
+      x = 1j	                                    complex	
+      x = ["apple", "banana", "cherry"]	            list	
+      x = ("apple", "banana", "cherry")	            tuple	
+      x = range(6)	                              range	
+      x = {"name" : "John", "age" : 36}	            dict	
+      x = {"apple", "banana", "cherry"}	            set	
+      x = frozenset({"apple", "banana", "cherry"})	frozenset	
+      x = True	                                    bool	
+      x = b"Hello"	                              bytes	
+      x = bytearray(5)	                              bytearray	
+      x = memoryview(bytes(5))	                  memoryview	
+      x = None	                                    NoneType
+
+4. Setting the Specific Data Type
+      In Python, the data type is set when you assign a value to a variable:
+      Example	                                  Data Type	
+      x = str("Hello World")	                        str	
+      x = int(20)	                                    int	
+      x = float(20.5)	                              float	
+      x = complex(1j)	                              complex	
+      x = list(("apple", "banana", "cherry"))	      list	
+      x = tuple(("apple", "banana", "cherry"))	      tuple	
+      x = range(6)	                              range	
+      x = dict(name="John", age=36)	                  dict	
+      x = set(("apple", "banana", "cherry"))	      set	
+      x = frozenset(("apple", "banana", "cherry"))	frozenset	
+      x = bool(5)	                                    bool	
+      x = bytes(5)	                              bytes	
+      x = bytearray(5)	                              bytearray	
+      x = memoryview(bytes(5))	                  memoryview
+````
+
+## Python Numbers
+```
+      There are three numeric types in Python:
+      
+      int
+      float
+      complex
+      Variables of numeric types are created when you assign a value to them:
+      
+      ExampleGet your own Python Server
+      x = 1    # int
+      y = 2.8  # float
+      z = 1j   # complex
+
+      To verify the type of any object in Python, use the type() function:
+      
+      Example
+      print(type(x))
+      print(type(y))
+      print(type(z))
+      
+1. Int
+      Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+      
+      Example
+      Integers:
+      
+      x = 1
+      y = 35656222554887711
+      z = -3255522
+      
+      print(type(x))
+      print(type(y))
+      print(type(z))
+
+      o/p:
+      <class 'int'>
+      <class 'int'>
+      <class 'int'>
+
+2. Float
+      Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+      
+      Example
+      Floats:
+      
+      x = 1.10
+      y = 1.0
+      z = -35.59
+      
+      print(type(x))
+      print(type(y))
+      print(type(z))
+
+      Float can also be scientific numbers with an "e" to indicate the power of 10.
+      
+      Example
+      Floats:
+      
+            x = 35e3
+            y = 12E4
+            z = -87.7e100
+            
+            print(type(x))
+            print(type(y))
+            print(type(z))
+
+3. Complex
+      Complex numbers are written with a "j" as the imaginary part:
+      
+      Example
+      Complex:
+      
+      x = 3+5j
+      y = 5j
+      z = -5j
+      
+      print(type(x))
+      print(type(y))
+      print(type(z))
