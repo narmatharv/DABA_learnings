@@ -946,3 +946,210 @@ Example 2:
 
 ```
 
+
+## Python - String Methods
+```
+Python has a set of built-in methods that you can use on strings.
+
+Note: All string methods return new values. They do not change the original string.
+
+Method	Description
+capitalize()	Converts the first character to upper case
+casefold()	Converts string into lower case
+center()	Returns a centered string
+count()	Returns the number of times a specified value occurs in a string
+encode()	Returns an encoded version of the string
+endswith()	Returns true if the string ends with the specified value
+expandtabs()	Sets the tab size of the string
+find()	Searches the string for a specified value and returns the position of where it was found
+format()	Formats specified values in a string
+format_map()	Formats specified values in a string
+index()	Searches the string for a specified value and returns the position of where it was found
+isalnum()	Returns True if all characters in the string are alphanumeric
+isalpha()	Returns True if all characters in the string are in the alphabet
+isascii()	Returns True if all characters in the string are ascii characters
+isdecimal()	Returns True if all characters in the string are decimals
+isdigit()	Returns True if all characters in the string are digits
+isidentifier()	Returns True if the string is an identifier
+islower()	Returns True if all characters in the string are lower case
+isnumeric()	Returns True if all characters in the string are numeric
+isprintable()	Returns True if all characters in the string are printable
+isspace()	Returns True if all characters in the string are whitespaces
+istitle()	Returns True if the string follows the rules of a title
+isupper()	Returns True if all characters in the string are upper case
+join()	Joins the elements of an iterable to the end of the string
+ljust()	Returns a left justified version of the string
+lower()	Converts a string into lower case
+lstrip()	Returns a left trim version of the string
+maketrans()	Returns a translation table to be used in translations
+partition()	Returns a tuple where the string is parted into three parts
+replace()	Returns a string where a specified value is replaced with a specified value
+rfind()	Searches the string for a specified value and returns the last position of where it was found
+rindex()	Searches the string for a specified value and returns the last position of where it was found
+rjust()	Returns a right justified version of the string
+rpartition()	Returns a tuple where the string is parted into three parts
+rsplit()	Splits the string at the specified separator, and returns a list
+rstrip()	Returns a right trim version of the string
+split()	Splits the string at the specified separator, and returns a list
+splitlines()	Splits the string at line breaks and returns a list
+startswith()	Returns true if the string starts with the specified value
+strip()	Returns a trimmed version of the string
+swapcase()	Swaps cases, lower case becomes upper case and vice versa
+title()	Converts the first character of each word to upper case
+translate()	Returns a translated string
+upper()	Converts a string into upper case
+zfill()	Fills the string with a specified number of 0 values at the beginning
+
+```
+
+## Python Booleans
+```
+Booleans represent one of two values: True or False.
+
+1. Boolean Values
+      In programming you often need to know if an expression is True or False.
+      
+      You can evaluate any expression in Python, and get one of two answers, True or False.
+      
+      When you compare two values, the expression is evaluated and Python returns the Boolean answer:
+      
+      Example 1:
+            print(10 > 9)
+            print(10 == 9)
+            print(10 < 9)
+      
+      When you run a condition in an if statement, Python returns True or False:
+      
+      Example 2:
+      Print a message based on whether the condition is True or False:
+      
+            a = 200
+            b = 33
+            
+            if b > a:
+              print("b is greater than a")
+            else:
+              print("b is not greater than a")
+
+
+2. Evaluate Values and Variables
+      The bool() function allows you to evaluate any value, and give you True or False in return,
+
+      Example
+      Evaluate a string and a number:
+      
+      print(bool("Hello"))
+      print(bool(15))
+      
+      o/p:
+      True
+      True
+
+3. Most Values are True
+      Almost any value is evaluated to True if it has some sort of content.
+      
+      Any string is True, except empty strings.
+      
+      Any number is True, except 0.
+      
+      Any list, tuple, set, and dictionary are True, except empty ones.
+      
+      Example
+      The following will return True:
+      
+      bool("abc")
+      bool(123)
+      bool(["apple", "cherry", "banana"])
+      
+      o/p:
+      True
+      True
+      True
+
+4. Some Values are False
+      In fact, there are not many values that evaluate to False, except empty values, such as (), [], {}, "", the number 0, and the value None. And of course the value False evaluates to       False.
+      
+      Example 1:
+      The following will return False:
+      
+      bool(False)
+      bool(None)
+      bool(0)
+      bool("")
+      bool(())
+      bool([])
+      bool({})
+
+      o/p:
+      False
+      False
+      False
+      False
+      False
+      False
+      False
+      
+      One more value, or object in this case, evaluates to False, and that is if you have an object that is made from a class with a __len__ function that returns 0 or False:
+      
+      Example 2:
+            class myclass():
+              def __len__(self):
+                return 0
+            
+            myobj = myclass()
+            print(bool(myobj))
+
+      o/p: False
+
+
+5. Functions can Return a Boolean
+      You can create functions that returns a Boolean Value:
+      
+      Example
+            Print the answer of a function:
+            
+            def myFunction() :
+              return True
+            
+            print(myFunction())
+
+      o/p: True
+
+      You can execute code based on the Boolean answer of a function:
+      
+      Example
+      Print "YES!" if the function returns True, otherwise print "NO!":
+      
+      def myFunction() :
+        return True
+      
+      if myFunction():
+        print("YES!")
+      else:
+        print("NO!")
+
+
+      Python also has many built-in functions that return a boolean value, like the isinstance() function, which can be used to determine if an object is of a certain data type:
+      
+      Example
+      Check if an object is an integer or not:
+      
+      x = 200
+      print(isinstance(x, int))
+      
+      o/p: True
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
