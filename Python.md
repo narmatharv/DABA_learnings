@@ -1120,13 +1120,13 @@ Booleans represent one of two values: True or False.
       Example
       Print "YES!" if the function returns True, otherwise print "NO!":
       
-      def myFunction() :
-        return True
-      
-      if myFunction():
-        print("YES!")
-      else:
-        print("NO!")
+            def myFunction() :
+              return True
+            
+            if myFunction():
+              print("YES!")
+            else:
+              print("NO!")
 
 
       Python also has many built-in functions that return a boolean value, like the isinstance() function, which can be used to determine if an object is of a certain data type:
@@ -1134,12 +1134,636 @@ Booleans represent one of two values: True or False.
       Example
       Check if an object is an integer or not:
       
-      x = 200
-      print(isinstance(x, int))
+            x = 200
+            print(isinstance(x, int))
       
       o/p: True
 
 ```
+
+
+## Python Operators
+```
+Operators are used to perform operations on variables and values.
+
+In the example below, we use the + operator to add together two values:
+
+Example
+      print(10 + 5)
+
+Python divides the operators in the following groups:
+
+Arithmetic operators
+Assignment operators
+Comparison operators
+Logical operators
+Identity operators
+Membership operators
+Bitwise operators
+
+
+1.Python Arithmetic Operators
+      Arithmetic operators are used with numeric values to perform common mathematical operations:
+      
+      Operator	Name	            Example	
+      +	      Addition	      x + y	
+      -	      Subtraction	      x - y	
+      *	      Multiplication	x * y	
+      /	      Division	      x / y	
+      %	      Modulus	      x % y	
+      **	      Exponentiation	x ** y	
+      //	      Floor division	x // y	
+
+2. Python Assignment Operators
+      Assignment operators are used to assign values to variables:
+
+      Operator	Example	Same As	
+      =	      x = 5	      x = 5	
+      +=	      x += 3	x = x + 3	
+      -=	      x -= 3	x = x - 3	
+      *=	      x *= 3	x = x * 3	
+      /=	      x /= 3	x = x / 3	
+      %=	      x %= 3	x = x % 3	
+      //=	      x //= 3	x = x // 3	
+      **=	      x **= 3	x = x ** 3	
+      &=	      x &= 3	x = x & 3	
+      |=	      x |= 3	x = x | 3	
+      ^=	      x ^= 3	x = x ^ 3	
+      >>=	      x >>= 3	x = x >> 3	---> bitwise operator, right shift
+      Eg:
+      x = 5
+      x >>= 3
+      print(x)
+      
+      o/p: 0
+      Here x=5, 5>>3
+      here 5 in binary code is 101, so we need to shift right by 3 bits, so result is 0, since we have only 3 digits.
+
+      <<=	      x <<= 3	x = x << 3	---> bitwise operator, left shift
+
+      Eg:
+      x = 5
+      x <<= 3
+      print(x)
+      
+      
+      o/p: 40
+      5<<3, 5 in binary is 101, we need to shift 3 bits left, 101000 which is 40 in decimal.
+
+
+3. Python Comparison Operators
+      Comparison operators are used to compare two values:
+      
+      Operator	Name	                        Example	
+      ==	      Equal	                        x == y	
+      !=	      Not equal	                  x != y	
+      >	      Greater than	            x > y	
+      <	      Less than	                  x < y	
+      >=	      Greater than or equal to	x >= y	
+      <=	      Less than or equal to	      x <= y
+      
+      
+4. Python Logical Operators
+      Logical operators are used to combine conditional statements:
+      
+      Operator	Description	                                                Example	
+      and 	      Returns True if both statements are true	                  x < 5 and  x < 10	
+      or	      Returns True if one of the statements is true	            x < 5 or x < 4	
+      not	      Reverse the result, returns False if the result is true	not(x < 5 and x < 10)
+
+5.Python Identity Operators
+      Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
+      
+      Operator	            Description	                                    Example	
+      is 	      Returns True if both variables are the same object	      x is y	
+      is not	Returns True if both variables are not the same object	x is not y
+
+6. Python Membership Operators
+      Membership operators are used to test if a sequence is presented in an object:
+      
+      Operator	      Description	                                                                        Example	
+      in 	            Returns True if a sequence with the specified value is present in the object	      x in y	
+      not in	      Returns True if a sequence with the specified value is not present in the object	x not in y
+
+
+7. Python Bitwise Operators
+      Bitwise operators are used to compare (binary) numbers:
+      
+      Operator	      Name	                              Description	                                                                                                Example	
+      & 	            AND	                              Sets each bit to 1 if both bits are 1	                                                                  x & y	
+      |	            OR	                              Sets each bit to 1 if one of two bits is 1	                                                            x | y	
+      ^	            XOR	                              Sets each bit to 1 if only one of two bits is 1	                                                            x ^ y	
+      ~	            NOT	                              Inverts all the bits	                                                                                      ~x	
+      <<	            Zero fill left shift	            Shift left by pushing zeros in from the right and let the leftmost bits fall off	                        x << 2	
+      >>	            Signed right shift	            Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off	x >> 2
+
+
+8. Operator Precedence
+      Operator precedence describes the order in which operations are performed.
+      
+      Example 1:
+      Parentheses has the highest precedence, meaning that expressions inside parentheses must be evaluated first:
+      
+            print((6 + 3) - (6 + 3))
+      
+            o/p: 0
+
+      Example 2:
+      Multiplication * has higher precedence than addition +, and therefor multiplications are evaluated before additions:
+      
+            print(100 + 5 * 3)
+      
+            o/p: 115
+
+      The precedence order is described in the table below, starting with the highest precedence at the top:
+      
+      Operator	                                    Description	t
+      ()	                                          Parentheses	
+      **	                                          Exponentiation	
+      +x  -x  ~x	                                    Unary plus, unary minus, and bitwise NOT	
+      *  /  //  %	                                    Multiplication, division, floor division, and modulus	
+      +  -	                                          Addition and subtraction	
+      <<  >>	                                    Bitwise left and right shifts	
+      &	                                          Bitwise AND	
+      ^	                                          Bitwise XOR	
+      |	                                          Bitwise OR	
+      ==  !=  >  >=  <  <=  is  is not  in  not in 	Comparisons, identity, and membership operators	
+      not	                                          Logical NOT	
+      and	                                          AND	
+      or	                                          OR
+
+
+      NOTE: If two operators have the same precedence, the expression is evaluated from left to right.
+      
+      Example
+      Addition + and subtraction - has the same precedence, and therefor we evaluate the expression from left to right:
+      
+            print(5 + 4 - 7 + 3)
+            o/p: 5
+
+```
+
+## Python Lists
+```
+1. List
+      Lists are used to store multiple items in a single variable.
+      
+      Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+      
+      Lists are created using square brackets:
+      
+      Example:
+      Create a List:
+      
+            thislist = ["apple", "banana", "cherry"]
+            print(thislist)
+
+2. List Items
+      List items are ordered, changeable, and allow duplicate values.
+      
+      List items are indexed, the first item has index [0], the second item has index [1] etc.
+
+      a) Ordered
+            When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+            
+            If you add new items to a list, the new items will be placed at the end of the list.
+            
+            Note: There are some list methods that will change the order, but in general: the order of the items will not change.
+      
+      b) Changeable
+            The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+      
+      c) Allow Duplicates
+            Since lists are indexed, lists can have items with the same value:
+      
+            Example
+            Lists allow duplicate values:
+            
+            thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+            print(thislist)
+
+3. List Length
+      To determine how many items a list has, use the len() function:
+      
+      Example
+      Print the number of items in the list:
+      
+      thislist = ["apple", "banana", "cherry"]
+      print(len(thislist))
+
+4. List Items - Data Types
+      List items can be of any data type:
+      
+      Example
+      String, int and boolean data types:
+      
+      list1 = ["apple", "banana", "cherry"]
+      list2 = [1, 5, 7, 9, 3]
+      list3 = [True, False, False]
+
+      A list can contain different data types:
+      
+      Example
+      A list with strings, integers and boolean values:
+      
+      list1 = ["abc", 34, True, 40, "male"]
+      o/p: ['abc', 34, True, 40, 'male']
+
+5. type()
+      From Python's perspective, lists are defined as objects with the data type 'list':
+      
+      <class 'list'>
+      
+      Example
+      What is the data type of a list?
+      
+      mylist = ["apple", "banana", "cherry"]
+      print(type(mylist))
+
+      o/p: <class 'list'>
+
+6. The list() Constructor
+      It is also possible to use the list() constructor when creating a new list.
+      
+      Example
+      Using the list() constructor to make a List:
+      
+      thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+      print(thislist)
+      
+      o/p: ['apple', 'banana', 'cherry']
+
+7. Python Collections (Arrays)
+      There are four collection data types in the Python programming language:
+      
+      List is a collection which is ordered and changeable. Allows duplicate members.
+      Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+      Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+      Dictionary is a collection which is ordered** and changeable. No duplicate members.
+      
+      Note: When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning,          and, it could mean an increase in efficiency or security.
+
+```
+
+## Python - Access List Items
+```
+1. Access Items
+      List items are indexed and you can access them by referring to the index number:
+      
+      Example
+      Print the second item of the list:
+      
+      thislist = ["apple", "banana", "cherry"]
+      print(thislist[1])
+      Note: The first item has index 0.
+
+2. Negative Indexing
+      Negative indexing means start from the end
+      
+      -1 refers to the last item, -2 refers to the second last item etc.
+      
+      Example
+      Print the last item of the list:
+      
+      thislist = ["apple", "banana", "cherry"]
+      print(thislist[-1])
+
+3. Range of Indexes
+      You can specify a range of indexes by specifying where to start and where to end the range.
+      
+      When specifying a range, the return value will be a new list with the specified items.
+      
+      Example 1:
+            Return the third, fourth, and fifth item:
+            
+            thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+            print(thislist[2:5])
+            Note: The search will start at index 2 (included) and end at index 5 (not included).
+            
+            Remember that the first item has index 0.
+            
+            By leaving out the start value, the range will start at the first item:
+            
+      Example 2:
+            This example returns the items from the beginning to, but NOT including, "kiwi":
+            
+            thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+            print(thislist[:4])
+            By leaving out the end value, the range will go on to the end of the list:
+      
+      Example 3:
+            This example returns the items from "cherry" to the end:
+            
+            thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+            print(thislist[2:])
+
+4. Range of Negative Indexes
+      Specify negative indexes if you want to start the search from the end of the list:
+      
+      Example
+      This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):
+      
+      thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+      print(thislist[-4:-1])
+      
+      o/p: ['orange', 'kiwi', 'melon']
+
+
+5. Check if Item Exists
+      To determine if a specified item is present in a list use the in keyword:
+      
+      Example
+      Check if "apple" is present in the list:
+      
+      thislist = ["apple", "banana", "cherry"]
+      if "apple" in thislist:
+        print("Yes, 'apple' is in the fruits list")
+
+```
+
+## Python - Change List Items
+```
+1. Change Item Value
+      To change the value of a specific item, refer to the index number:
+      
+      Example
+      Change the second item:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist[1] = "blackcurrant"
+      print(thislist)
+      o/p: ['apple', 'blackcurrant', 'cherry']
+
+2. Change a Range of Item Values
+      To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the new values:
+      
+      Example 1:
+      Change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":
+      
+      thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+      thislist[1:3] = ["blackcurrant", "watermelon"]
+      print(thislist)
+      If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
+
+      Example 2:
+      Change the second value by replacing it with two new values:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist[1:2] = ["blackcurrant", "watermelon"]
+      print(thislist)
+      Note: The length of the list will change when the number of items inserted does not match the number of items replaced.
+      
+      If you insert less items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
+
+      Example 3:
+      Change the second and third value by replacing it with one value:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist[1:3] = ["watermelon"]
+      print(thislist)
+
+3. Insert Items
+      To insert a new list item, without replacing any of the existing values, we can use the insert() method.
+      
+      The insert() method inserts an item at the specified index:
+      
+      Example
+      Insert "watermelon" as the third item:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist.insert(2, "watermelon")
+      print(thislist)
+      o/p: ['apple', 'banana', 'watermelon', 'cherry']
+```
+
+## Python - Add List Items
+```
+1. Append Items
+      To add an item to the end of the list, use the append() method:
+      
+      Example
+      Using the append() method to append an item:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist.append("orange")
+      print(thislist)
+      
+2. Insert Items
+      To insert a list item at a specified index, use the insert() method.
+      
+      The insert() method inserts an item at the specified index:
+      
+      Example
+      Insert an item as the second position:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist.insert(1, "orange")
+      print(thislist)
+      Note: As a result of the examples above, the lists will now contain 4 items.
+
+3. Extend List
+      To append elements from another list to the current list, use the extend() method.
+      
+      Example
+      Add the elements of tropical to thislist:
+      
+      thislist = ["apple", "banana", "cherry"]
+      tropical = ["mango", "pineapple", "papaya"]
+      thislist.extend(tropical)
+      print(thislist)
+      The elements will be added to the end of the list.
+
+4. Add Any Iterable
+      The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+      
+      Example
+      Add elements of a tuple to a list:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thistuple = ("kiwi", "orange")
+      thislist.extend(thistuple)
+      print(thislist)
+      o/p: ['apple', 'banana', 'cherry', 'kiwi', 'orange']
+```
+
+## Python - Remove List Items
+```
+1. Remove Specified Item
+      The remove() method removes the specified item.
+      
+      Example
+      Remove "banana":
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist.remove("banana")
+      print(thislist)
+
+      If there are more than one item with the specified value, the remove() method removes the first occurance:
+      
+      Example
+      Remove the first occurance of "banana":
+      
+      thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+      thislist.remove("banana")
+      print(thislist)
+
+2.Remove Specified Index
+      The pop() method removes the specified index.
+      
+      Example 1:
+      Remove the second item:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist.pop(1)
+      print(thislist)
+
+      If you do not specify the index, the pop() method removes the last item.
+      
+      Example 2;
+      Remove the last item:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist.pop()
+      print(thislist)
+      The del keyword also removes the specified index:
+      
+      Example 3:
+      Remove the first item:
+      
+      thislist = ["apple", "banana", "cherry"]
+      del thislist[0]
+      print(thislist)
+      The del keyword can also delete the list completely.
+      
+      Example 4:
+      Delete the entire list:
+      
+      thislist = ["apple", "banana", "cherry"]
+      del thislist
+
+      o/p:
+      Traceback (most recent call last):
+        File "demo_list_del2.py", line 3, in <module>
+          print(thislist) #this will cause an error because you have succsesfully deleted "thislist".
+      NameError: name 'thislist' is not defined
+
+3.Clear the List
+      The clear() method empties the list.
+      
+      The list still remains, but it has no content.
+      
+      Example
+      Clear the list content:
+      
+      thislist = ["apple", "banana", "cherry"]
+      thislist.clear()
+      print(thislist)
+
+      o/p: []
+      
+      
+```
+
+## Python - Loop Lists
+```
+1. Loop Through a List
+      You can loop through the list items by using a for loop:
+      
+      Example
+      Print all items in the list, one by one:
+      
+      thislist = ["apple", "banana", "cherry"]
+      for x in thislist:
+        print(x)
+      
+      o/p:
+      apple
+      banana
+      cherry
+
+2. Loop Through the Index Numbers
+      You can also loop through the list items by referring to their index number.
+      
+      Use the range() and len() functions to create a suitable iterable.
+      
+      Example
+      Print all items by referring to their index number:
+      
+      thislist = ["apple", "banana", "cherry"]
+      for i in range(len(thislist)):
+        print(thislist[i])
+      
+      Note: The iterable created in the example above is [0, 1, 2].
+
+3. Using a While Loop
+      You can loop through the list items by using a while loop.
+      
+      Use the len() function to determine the length of the list, then start at 0 and loop your way through the list items by referring to their indexes.
+      
+      Remember to increase the index by 1 after each iteration.
+      
+      Example
+      Print all items, using a while loop to go through all the index numbers
+      
+      thislist = ["apple", "banana", "cherry"]
+      i = 0
+      while i < len(thislist):
+        print(thislist[i])
+        i = i + 1
+
+      o/p:
+       apple
+       banana
+       cherry
+
+4. Looping Using List Comprehension
+      List Comprehension offers the shortest syntax for looping through lists:
+      
+      Example
+      A short hand for loop that will print all items in a list:
+      
+      thislist = ["apple", "banana", "cherry"]
+      [print(x) for x in thislist]
+      
+```
+
+## Python - List Comprehension
+```
+1. List Comprehension
+      List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+      
+      Example:
+      
+      Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+      
+      Without list comprehension you will have to write a for statement with a conditional test inside:
+      
+      Example
+      fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+      newlist = []
+      
+      for x in fruits:
+        if "a" in x:
+          newlist.append(x)
+      
+      print(newlist)
+
+      o/p: ['apple', 'banana', 'mango']
+
+      With list comprehension you can do all that with only one line of code:
+      
+      Example
+      fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+      
+      newlist = [x for x in fruits if "a" in x]
+      
+      print(newlist)
+
+```
+
+
+
+
 
 
 
