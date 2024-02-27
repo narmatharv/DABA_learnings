@@ -1917,4 +1917,213 @@ Bitwise operators
 
 ```
 
+## Python - Copy Lists
+```
+1. Copy a List
+      You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+      
+      There are ways to make a copy, one way is to use the built-in List method copy().
+      
+      Example 1:
+      Make a copy of a list with the copy() method:
+      
+      thislist = ["apple", "banana", "cherry"]
+      mylist = thislist.copy()
+      print(mylist)
+      
+      Another way to make a copy is to use the built-in method list().
+      
+      Example 2:
+      Make a copy of a list with the list() method:
+      
+      thislist = ["apple", "banana", "cherry"]
+      mylist = list(thislist)
+      print(mylist)
+```
+
+## Python - Join Lists
+```
+1. Join Two Lists
+      There are several ways to join, or concatenate, two or more lists in Python.
+      
+      One of the easiest ways are by using the + operator.
+      
+      Example 1:
+      Join two list:
+      
+      list1 = ["a", "b", "c"]
+      list2 = [1, 2, 3]
+      
+      list3 = list1 + list2
+      print(list3)
+      
+      o/p: ['a', 'b', 'c', 1, 2, 3]
+      
+      Another way to join two lists is by appending all the items from list2 into list1, one by one:
+      
+      Example 2:
+      Append list2 into list1:
+      
+      list1 = ["a", "b" , "c"]
+      list2 = [1, 2, 3]
+      
+      for x in list2:
+        list1.append(x)
+      
+      print(list1)
+
+      Or you can use the extend() method, where the purpose is to add elements from one list to another list:
+      
+      Example 3:
+      Use the extend() method to add list2 at the end of list1:
+      
+      list1 = ["a", "b" , "c"]
+      list2 = [1, 2, 3]
+      
+      list1.extend(list2)
+      print(list1)
+
+````
+
+## Python - List Methods
+```
+1. List Methods
+      Python has a set of built-in methods that you can use on lists.
+      
+      Method	Description
+      append()	Adds an element at the end of the list
+      clear()	Removes all the elements from the list
+      copy()	Returns a copy of the list
+      count()	Returns the number of elements with the specified value
+      extend()	Add the elements of a list (or any iterable), to the end of the current list
+      index()	Returns the index of the first element with the specified value
+      insert()	Adds an element at the specified position
+      pop()	Removes the element at the specified position
+      remove()	Removes the item with the specified value
+      reverse()	Reverses the order of the list
+      sort()	Sorts the list
+
+````
+
+## Python Tuples
+```
+mytuple = ("apple", "banana", "cherry")
+
+1. Tuple
+      Tuples are used to store multiple items in a single variable.
+      
+      Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.
+      
+      A tuple is a collection which is ordered and unchangeable.
+      
+      Tuples are written with round brackets.
+      
+      ExampleGet your own Python Server
+      Create a Tuple:
+      
+      thistuple = ("apple", "banana", "cherry")
+      print(thistuple)
+
+2. Tuple Items
+      Tuple items are ordered, unchangeable, and allow duplicate values.
+      
+      Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+
+3. Ordered
+      When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+
+4. Unchangeable
+      Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+
+5. Allow Duplicates
+      Since tuples are indexed, they can have items with the same value:
+
+      Example
+      Tuples allow duplicate values:
+      
+      thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+      print(thistuple)
+
+6.Tuple Length
+      To determine how many items a tuple has, use the len() function:
+      
+      Example
+      Print the number of items in the tuple:
+      
+      thistuple = ("apple", "banana", "cherry")
+      print(len(thistuple))
+
+7.Create Tuple With One Item
+      To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+      
+      Example
+      One item tuple, remember the comma:
+      
+      thistuple = ("apple",)
+      print(type(thistuple))
+      
+      #NOT a tuple
+      thistuple = ("apple")
+      print(type(thistuple))
+
+      o/p:
+      <class 'tuple'>
+      <class 'str'>
+
+8. Tuple Items - Data Types
+      Tuple items can be of any data type:
+      
+      Example
+      String, int and boolean data types:
+      
+      tuple1 = ("apple", "banana", "cherry")
+      tuple2 = (1, 5, 7, 9, 3)
+      tuple3 = (True, False, False)
+      print(tuple1)
+      print(tuple2)
+      print(tuple3)
+      
+      A tuple can contain different data types:
+      
+      Example
+      A tuple with strings, integers and boolean values:
+      
+      tuple1 = ("abc", 34, True, 40, "male")
+      o/p: ('abc', 34, True, 40, 'male')
+      
+9. type()
+      From Python's perspective, tuples are defined as objects with the data type 'tuple':
+      
+      <class 'tuple'>
+      Example
+      What is the data type of a tuple?
+      
+      mytuple = ("apple", "banana", "cherry")
+      print(type(mytuple))
+      
+      o/p: <class 'tuple'>
+
+10. The tuple() Constructor
+      It is also possible to use the tuple() constructor to make a tuple.
+      
+      Example
+      Using the tuple() method to make a tuple:
+      
+      thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+      print(thistuple)
+
+11. Python Collections (Arrays)
+      There are four collection data types in the Python programming language:
+      
+      List is a collection which is ordered and changeable. Allows duplicate members.
+      Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+      Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+      Dictionary is a collection which is ordered** and changeable. No duplicate members.
+```
+
+
+
+
+
+
 
